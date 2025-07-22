@@ -2,10 +2,10 @@
 
 ## Model Choice
 - For this classification task I selected **XGBoost** for the following reasons:
-   -     XGBoost is renowned for its performance on structured, tabular datasets. It handles mixed numeric and categorical (after one‑hot encoding) features exceptionally well.
-  -    Its tree‑based approach naturally splits on feature thresholds, reducing sensitivity to outliers and accommodating any remaining sparsity without extensive imputation.
-  -    XGBoost incorporates L1/L2 regularization to prevent overfitting, which is crucial given the moderate size (~8 000 rows) of our modeling set.
-  -    Training is efficient even with hundreds of features, and feature importance scores are straightforward to extract, enabling us to diagnose and act on the main drivers of SLA delays.
+   - XGBoost excels on structured tabular data with mixed numeric and one‑hot encoded categoricals.
+   - Its tree splits handle outliers and sparse values without heavy imputation.
+   - Built‑in L1/L2 regularization helps prevent overfitting on our ~8 000‑row dataset.
+   - Fast training and easy extraction of feature importances let us quickly identify SLA delay drivers.
 
 ## 1. Exploratory Data Analysis Recap
 
