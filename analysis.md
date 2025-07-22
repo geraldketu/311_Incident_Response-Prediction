@@ -73,4 +73,4 @@ These insights can guide targeted process improvements, such as reallocating cre
 
 _For full code, ROC curves, and feature‑importance visualizations, see `notebooks/XGBoost_model.ipynb`._  
 
-_Thanks for readinf you can check out the [model](https://huggingface.co/GeraldNdawula/311-xgb-model) here_
+_Thanks for reading you can check out the [model](https://huggingface.co/GeraldNdawula/311-xgb-model) here_
