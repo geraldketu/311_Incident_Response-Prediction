@@ -8,9 +8,7 @@
   - 10th–90th percentile: [0 days, 5 days]  
 - **SLA compliance (≤ 3 days):** 74.3% of requests  
 - **Channel differences:** “Phone” requests close slightly slower than digital channels  
-- **Spatial patterns:** Certain council districts and neighborhoods show systematically longer or shorter closure times  
 
----
 
 ## 2. Model Performance
 
@@ -21,7 +19,6 @@ From `XGBoost_model.ipynb`, on the 20% held‑out test set:
 
 These outperform the 74.3% baseline (always predicting “on‑time”) and demonstrate excellent discrimination between timely and delayed requests.
 
----
 
 ## 3. Detailed Classification Report
 
@@ -42,7 +39,6 @@ These outperform the 74.3% baseline (always predicting “on‑time”) and demo
 
 High recall on delays means the model is very effective at flagging requests likely to breach SLA.
 
----
 
 ## 4. Feature Importance
 
@@ -69,21 +65,12 @@ Top 10 most influential features and their importance scores:
 
 These insights can guide targeted process improvements, such as reallocating crews or digitizing phone requests in high-delay areas.
 
----
-
 ## 5. Business Implications
 
 - **High delay recall (94%)** enables proactive escalation of at-risk requests.  
 - **Spatial insights** allow city planners to allocate resources more evenly across neighborhoods and districts.  
 - **Service‑specific delays** (e.g., waste collection) suggest prioritizing additional capacity or faster protocols for those request types.
 
----
-
-## 6. Next Steps
-
-1. **Threshold tuning:** Adjust the decision threshold to balance false positives vs. missed delays.  
-2. **Temporal features:** Incorporate day‑of‑week, hour‑of‑day, and holiday indicators.  
-3. **Hyperparameter optimization:** Use cross‑validation with `GridSearchCV` or `Optuna` to further improve performance.  
-4. **Deployment:** Integrate this model into a real‑time dashboard for the 311 call center to flag potential SLA breaches immediately.  
-
 _For full code, ROC curves, and feature‑importance visualizations, see `notebooks/XGBoost_model.ipynb`._  
+
+_Thanks for readinf you can check out the [model](https://huggingface.co/GeraldNdawula/311-xgb-model) here_
