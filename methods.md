@@ -1,9 +1,9 @@
 # Methods & Pipeline
 ## 1. Data Retrieval (pipeline.py)
--API endpoints (2018–2023) from Baltimore’s ArcGIS 311 service.
--Query: `where=1=1`, `outFields=*`, `f=geojson`.
--Schema consistency: Confirmed all yearly endpoints share identical fields.
--Concatenate GeoJSON → Pandas → save `311 Response Data (2018-2023).csv.`
+- API endpoints (2018–2023) from Baltimore’s ArcGIS 311 service.
+- Query: `where=1=1`, `outFields=*`, `f=geojson`.
+- Schema consistency: Confirmed all yearly endpoints share identical fields.
+- Concatenate GeoJSON → Pandas → save `311 Response Data (2018-2023).csv.`
 ```python
 # Example endpoint fetch
 import requests, pandas as pd
@@ -58,8 +58,8 @@ model = xgb.XGBClassifier(
 model.fit(X_train, y_train)
 ```
 - Evaluation:
- ```
-python
+  
+```python
 from sklearn.metrics import accuracy_score, roc_auc_score, classification_report
 y_pred      = model.predict(X_test)
 y_proba     = model.predict_proba(X_test)[:,1]
