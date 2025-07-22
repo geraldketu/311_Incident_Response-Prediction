@@ -56,3 +56,4 @@ python data_processing.py
 jupyter lab notebooks/eda.ipynb notebooks/XGBoost_model.ipynb
 
 ```
+### For more in detail explanation of the methodologies used and analysis done refer to the `methods.md` and `analysis.md`
