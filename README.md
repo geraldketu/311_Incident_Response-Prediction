@@ -1,7 +1,6 @@
 
 # Baltimore 311 Incident Response Prediction
 
-*** TL;DR *** Here's the [model](https://huggingface.co/GeraldNdawula/311-xgb-model)
 
 ## Purpose & Motivation  
 City governments strive to resolve 311 service requests within a three‑day service‑level agreement (SLA). This project builds a pipeline to:  
@@ -9,6 +8,8 @@ City governments strive to resolve 311 service requests within a three‑day ser
 2. **Clean & engineer** features (timestamps, geolocation, request metadata)  
 3. **Explore** patterns in request volume, closure times, and SLA compliance  
 4. **Model** whether a request closes within three days using XGBoost  
+
+***TL;DR*** Here's the [model](https://huggingface.co/GeraldNdawula/311-xgb-model)
 
 ## Key Questions  
 - What percent of requests meet the 3‑day SLA?  
