@@ -40,12 +40,10 @@ df['Target'] = (df['ReqLengthOpen'] <= 3).astype(int)
 - Geographic coords and district may capture locational effects.
 
 ## 3. Exploratory Data Analysis (eda.ipynb)
-Volume by year: consistent ~2,000 requests/year
-Closure time distribution: heavy right skew; median = 1 day
-SLA compliance: ~74.3% closed ≤3 days
-Channel impact: requests via “Phone” slightly slower than “API”
-
-Visuals: histograms, boxplots, heatmaps on map.
+- Volume by year: consistent $~2,000$ requests/year
+- Closure time distribution: heavy right skew; `median $= 1$ day
+- SLA compliance: $~74.3%$ closed $≤3$ days
+- Channel impact: requests via `Phone` slightly slower than `API`
 
 ## 4. Modeling with XGBoost (notebooks/XGBoost_model.ipynb)
 - Train/test split: 80/20, `random_state=42`
@@ -60,7 +58,8 @@ model = xgb.XGBClassifier(
 model.fit(X_train, y_train)
 ```
 - Evaluation:
-   ```python
+ ```
+python
 from sklearn.metrics import accuracy_score, roc_auc_score, classification_report
 y_pred      = model.predict(X_test)
 y_proba     = model.predict_proba(X_test)[:,1]
@@ -68,6 +67,6 @@ acc   = accuracy_score(y_test, y_pred)
 auc   = roc_auc_score(y_test, y_proba)
 report = classification_report(y_test, y_pred)
 ```
-Feature importances: Top 20 features plotted via `model.feature_importances_.`
+- Feature importances: Top 20 features plotted via `model.feature_importances_.`
 
-Hyperparameter rationale: default XGBoost settings are robust for tabular data; future work will include tuning via `GridSearchCV`.
+- Hyperparameter rationale: default XGBoost settings are robust for tabular data; future work will include tuning via `GridSearchCV`.
