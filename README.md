@@ -15,7 +15,7 @@ City governments strive to resolve 311 service requests within a three‑day ser
 - How well can we predict delayed requests to proactively allocate resources?
 
 ## Dataset  
-- **Raw data**: 12,000 311 requests (2018–2023) with fields like `SRType`, `MethodReceived`, `CouncilDistrict`, geolocation, and timestamps.  
+- **Raw data**: 12,000 311 requests (2018–2023) with fields like `SRType`, `MethodReceived`, `CouncilDistrict`, `geolocation`, and `timestamps`.  
 - **Target**:  
   ```text
   Target = 1 if (CloseDate – CreatedDate) ≤ 3 days, else 0
