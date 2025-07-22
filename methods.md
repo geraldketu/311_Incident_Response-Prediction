@@ -45,7 +45,7 @@ df['Target'] = (df['ReqLengthOpen'] <= 3).astype(int)
 - SLA compliance: $~74.3%$ closed $≤3$ days
 - Channel impact: requests via `Phone` slightly slower than `API`
 
-## 4. Modeling with XGBoost (notebooks/XGBoost_model.ipynb)
+## 4. Modeling with XGBoost (XGBoost_model.ipynb)
 - Train/test split: 80/20, `random_state=42`
 - Model:
 ```python
@@ -70,3 +70,4 @@ report = classification_report(y_test, y_pred)
 - Feature importances: Top 20 features plotted via `model.feature_importances_.`
 
 - Hyperparameter rationale: default XGBoost settings are robust for tabular data; future work will include tuning via `GridSearchCV`.
+  #### For a more detailed analysis refer to the `analysis.md`
