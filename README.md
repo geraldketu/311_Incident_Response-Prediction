@@ -1,8 +1,6 @@
 
 # Baltimore 311 Incident Response Prediction
-
-
-## Purpose & Motivation  
+## Overview
 City governments strive to resolve 311 service requests within a three‑day service‑level agreement (SLA). This project builds a pipeline to:  
 1. **Retrieve** Baltimore 311 data (2018–2023) via ArcGIS API  
 2. **Clean & engineer** features (timestamps, geolocation, request metadata)  
