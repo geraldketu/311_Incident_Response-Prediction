@@ -1,7 +1,7 @@
 # Results & Analysis
 
 ## Model Choice
-- For this classification task—predicting whether a 311 request meets the 3‑day SLA—I selected **XGBoost** for several reasons:
+- For this classification task I selected **XGBoost** for the following reasons:
    - 1. XGBoost is renowned for its performance on structured, tabular datasets. It handles mixed numeric and categorical (after one‑hot encoding) features exceptionally well.
   - 2. Its tree‑based approach naturally splits on feature thresholds, reducing sensitivity to outliers and accommodating any remaining sparsity without extensive imputation.
   - 3. XGBoost incorporates L1/L2 regularization to prevent overfitting, which is crucial given the moderate size (~8 000 rows) of our modeling set.
